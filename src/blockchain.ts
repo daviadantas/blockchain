@@ -78,7 +78,7 @@ export class BlockChain {
         const hashReduzido = hashBloco.slice(0, 12)
         const tempoMineracao = (final - inicio) / 1000
 
-        console.log(`Bloco #${bloco.sequencia} minerado em ${tempoMineracao} segundos. Hash: ${hashReduzido} (${nonce} tentativas)`)
+        console.log(`Bloco #${bloco.sequencia} minerado em ${tempoMineracao} segundos. Hash: ${hashReduzido} tentativas ${nonce} hash minerado ${hashPow}`)
 
         return {
           blocoMinerado: { payload: { ...bloco }, header: { nonce, hashBloco } },

@@ -5,5 +5,6 @@ export function hash (dado: BinaryLike) {
 
 export function hashValidado ({ hash, dificuldade = 4, prefixo = '0' }: { hash: string, dificuldade?: number, prefixo?: string }) {
   const check = prefixo.repeat(dificuldade)
-  return hash.startsWith(check)
+  let hashPow = hash.startsWith(check)
+  return hashPow
 }

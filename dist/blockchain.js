@@ -54,7 +54,7 @@ class BlockChain {
         let inicio = +new Date();
         while (true) {
             const hashBloco = (0, helpers_1.hash)(JSON.stringify(bloco));
-            const hashPow = (0, helpers_1.hash)(hashBloco + (nonce + 1));
+            const hashPow = (0, helpers_1.hash)(hashBloco + nonce);
             if ((0, helpers_1.hashValidado)({
                 hash: hashPow,
                 dificuldade: this.dificuldade,
@@ -63,7 +63,7 @@ class BlockChain {
                 const final = +new Date();
                 const hashReduzido = hashBloco.slice(0, 12);
                 const tempoMineracao = (final - inicio) / 1000;
-                console.log(`Bloco #${bloco.sequencia} minerado em ${tempoMineracao} segundos. Hash: ${hashReduzido} (${nonce} tentativas)`);
+                console.log(`Bloco #${bloco.sequencia} minerado em ${tempoMineracao} segundos. Hash: ${hashReduzido} tentativas ${nonce} hash minerado ${hashPow}`);
                 return {
                     blocoMinerado: { payload: Object.assign({}, bloco), header: { nonce, hashBloco } },
                     minedHash: hashPow,

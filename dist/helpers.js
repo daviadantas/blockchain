@@ -8,7 +8,8 @@ function hash(dado) {
 exports.hash = hash;
 function hashValidado({ hash, dificuldade = 4, prefixo = '0' }) {
     const check = prefixo.repeat(dificuldade);
-    return hash.startsWith(check);
+    let hashPow = hash.startsWith(check);
+    return hashPow;
 }
 exports.hashValidado = hashValidado;
 //# sourceMappingURL=helpers.js.map
