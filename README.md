@@ -1,56 +1,53 @@
-# TypeScript Blockchain
+# Blockchain TypeScript
 
-> 🇺🇸 A simple implementation of blockchain in TypeScript.
+> 🇧🇷 Uma implementação simples de blockchain em TypeScript.
 
-> 🇧🇷 Para a versão em Português, clique [aqui](README-pt.md). 🇧🇷
+## Descrição
 
-## Description
+Esta é uma implementação simples de blockchain no TypeScript. Os objetivos são puramente educacionais.
 
-This is a simple implementation of blockchain in TypeScript. The objectives are purely educational.
+Esta é __não__ uma implementação de blockchain com todos os recursos. Pretende-se apenas mostrar como usar os conceitos básicos de blockchain.
 
-This is __not__ a fully featured blockchain implementation. It is only intended to show how to use the basic concepts of blockchain.
+Por enquanto, não é distribuída. No entanto, há planos para torná-la ainda mais robusta e distribuída usando comunicação em rede.
 
-For now, it is not distributed. However there are plans to make it even more robust and distributed using network communication.
+Características atuais:
 
-Current features:
+- Executa em um único nó
+- Pode ser usado para criar uma nova blockchain
+- Pode ser usado para adicionar novos blocos a uma blockchain existente
+- Pode ser usado para verificar a validade de um bloco
+- Os blocos suportam quaisquer dados em seus `payloads`
 
-- Runs in a single node
-- Can be used to create a new blockchain
-- Can be used to add new blocks to an existing blockchain
-- Can be used to verify the validity of a block
-- Blocks support any data on the payloads
+Características futuras:
 
-Future features:
+- Salvar e ler a blockchain em um arquivo
+- Adicionar suporte a transações
+- Adicionar suporte a ramificações
+- Adicionar suporte a tokens
+- Rede distribuída
+- Consenso distribuído
+- Transações distribuídas
+- Mineração distribuída
 
-- Save the blockchain to a file
-- Add transaction support
-- Add branching support
-- Add token support
-- Distributed network
-- Distributed consensus
-- Distributed transaction
-- Distributed mining
-
-
-## Installation
+## Instalação
 
 ```bash
 npm i
 ```
 
-## Usage
+## Uso
 
-It takes a two optional parameters which are
+É preciso dois parâmetro opcionais que são:
 
-- the difficulty of the mining process. Default is `4`.
-- the number of blocks to mine. Default is `10`.
+- a dificuldade do processo de mineração. O padrão é `4`.
+- o número de blocos a minerar. O padrão é `10`.
 
 ```bash
-npm start [difficulty = 4] [numberOfBlocks = 10]
+npm start [dificuldade = 4] [númeroDeBlocos = 10]
 ```
 
-## Forseeable To-Do
+## Tarefas de um futuro próximo
 
-- [ ] Distributed network
-- [ ] Refactor to make blocks a class instead of an interface so it can have internal methods to calculate hashes and nonces
-- [ ] Add small graph visualization frontend
+- [ ] Rede distribuída
+- [ ] Refatorar para tornar os blocos uma classe em vez de uma interface para que possa ter métodos internos para calcular hashes e nonces
+- [ ] Adicionar um pequeno frontend para visualizar a blockchain como um gráfico
