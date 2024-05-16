@@ -43,11 +43,5 @@ npm i
 - o número de blocos a minerar. O padrão é `10`.
 
 ```bash
-npm start [dificuldade = 4] [númeroDeBlocos = 10]
+npm start --4 10
 ```
-
-## Tarefas de um futuro próximo
-
-- [ ] Rede distribuída
-- [ ] Refatorar para tornar os blocos uma classe em vez de uma interface para que possa ter métodos internos para calcular hashes e nonces
-- [ ] Adicionar um pequeno frontend para visualizar a blockchain como um gráfico
